@@ -1,10 +1,9 @@
-
 import os
 import unittest
 
 from requests import HTTPError
 
-from .. import RiotWatcher
+from riotwatcher import *
 
 
 class RiotWatcherRealApiAccessTestCase(unittest.TestCase):

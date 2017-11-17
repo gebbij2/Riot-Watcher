@@ -1,9 +1,9 @@
 
-from . import RequestHandler
-from . import RateLimitHeaders
+from Handlers.RequestHandler import RequestHandler
+from Handlers.RateLimitHeaders import RateLimitHeaders
 
 
-class BaseRateLimitHandler(RequestHandler):
+class BaseRateLimitHandler():
     """
     The BaseRateLimitHandler class is meant to be extended in order to provide more sophisticated rate limiting
     functionality. This class only provides the necessary preview and after request functions which should
@@ -50,7 +50,8 @@ class BaseRateLimitHandler(RequestHandler):
         :param url: the URL that is being requested.
         :param query_params: dict: the parameters to the url that is being queried, e.g. ?key1=val&key2=val2
         """
-        super(BaseRateLimitHandler, self).preview_request(endpoint_name, method_name, url, query_params)
+        # super(BaseRateLimitHandler, self).preview_request(endpoint_name, method_name, url, query_params)
+        pass
 
     def after_request(self, endpoint_name, method_name, url, response):
         """
@@ -61,7 +62,7 @@ class BaseRateLimitHandler(RequestHandler):
         :param url: The url that was requested
         :param response: the response received. This is a response from the Requests library
         """
-        super(BaseRateLimitHandler, self).after_request(endpoint_name, method_name, url, response)
+        # super(BaseRateLimitHandler, self).after_request(endpoint_name, method_name, url, response)
 
         headers = RateLimitHeaders(response.headers, self.last_rate_headers)
 

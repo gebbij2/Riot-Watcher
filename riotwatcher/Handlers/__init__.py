@@ -1,12 +1,12 @@
 
-from .LimitCount import LimitCount
-from .RateLimitHeaders import RateLimitHeaders
-from .RequestHandler import RequestHandler
+from Handlers.LimitCount import LimitCount
+from Handlers.RateLimitHeaders import RateLimitHeaders
+from Handlers.RequestHandler import RequestHandler
 
-from .BaseRateLimitHandler import BaseRateLimitHandler
-from .JsonifyHandler import JsonifyHandler
-from .ThrowOnErrorHandler import ThrowOnErrorHandler
-from .WaitingRateLimitHandler import WaitingRateLimitHandler
+from Handlers.BaseRateLimitHandler import BaseRateLimitHandler
+from Handlers.JsonifyHandler import JsonifyHandler
+from Handlers.ThrowOnErrorHandler import ThrowOnErrorHandler
+from Handlers.WaitingRateLimitHandler import WaitingRateLimitHandler
 
 __all__ = [
     'LimitCount',

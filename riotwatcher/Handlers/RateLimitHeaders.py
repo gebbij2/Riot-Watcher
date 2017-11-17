@@ -1,7 +1,7 @@
 
 import datetime
 
-from . import LimitCount
+from Handlers.LimitCount import LimitCount
 
 
 class RateLimitHeaders(object):

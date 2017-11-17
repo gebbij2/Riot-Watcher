@@ -1,6 +1,6 @@
 
-from ._apis import *
-from .Handlers import *
+from _apis import *
+from Handlers import *
 
 
 class RiotWatcher:
