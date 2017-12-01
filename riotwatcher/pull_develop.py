@@ -6,7 +6,7 @@ import json
 watcher = RiotWatcher('RGAPI-8c951269-bdec-41d0-9cae-6ba64078ce55')
 my_region = 'na1'
 
-me = watcher.summoner.by_name(my_region, 'SMACK THE POON') #I'm so sorry, I'll fix this soon
+me = watcher.summoner.by_name(my_region, 'player_name') 
 print(me)
 
 
